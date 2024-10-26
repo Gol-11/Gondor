@@ -1,0 +1,270 @@
+﻿<style>
+    /* Navbar container */
+    body {
+       
+        justify-content: center;
+    }
+    .navbar {
+        overflow: hidden;
+        background-color: darkorange;
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+    }
+
+        /* Links inside the navbar */
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            max-height:20px;
+        }
+
+    /* The dropdown container */
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+        /* Dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit; /* Important for vertical align on mobile phones */
+            margin: 0; /* Important for vertical align on mobile phones */
+            max-width:fit-content;
+        }
+
+        /* Add a red background color to navbar links on hover */
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+            /* Add a grey background color to dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .navbar input[type=text] {
+        float: right;
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        font-size: 17px;
+        border-radius:15px;
+    }
+    
+
+
+  
+  .navbar input[type=text] {
+    border: 1px solid #ccc;
+  }
+ 
+
+
+    .footer-orange {
+        height: 350px;
+        width:100%;
+        background-color: pink;
+        display: flex;
+        justify-content:center;
+       
+    }
+    .ft-1 {
+        margin: 10px;
+        padding: 40px;
+        font-size: 15px;
+        width: 200px;
+      
+    }
+        .ft-1 a {
+            text-decoration: none;
+            color:black;
+            font-weight:50;
+
+        }
+       footer{
+      
+           justify-items:center;
+            
+       }
+    .footer-footer {
+        max-width: max-content;
+        max-height:auto;
+        align-content:center;
+        align-items:center;
+        justify-content: center;
+    }
+
+</style>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">
+                Danh mục sản phẩm
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Khuyến mãi nổi bật</a>
+                <a href="#">Sản phẩm ăn liền</a>
+                <a href="#">Kem</a>
+                <a href="#">Thực phẩm trữ đông</a>
+                <a href="#">Thực phẩm trữ mát</a>
+                <a href="#">Sữa-Sữa chua-Thực phẩm từ sữa</a>
+                <a href="#">Nước-Nước giải khát</a>
+                <a href="#">Bia-NGK có cồn</a>
+            </div>
+        </div>
+        <a href="#">logo</a>
+        <input type="text" placeholder="Tìm sản phẩm bạn đang cần">
+        <div class="navbar-right1">
+            <a href="#">
+                0911.825.753
+                7:00 - 22.00
+            </a>
+        </div>
+        <div class="navbar-right1">
+            <a href="#">Địa chỉ cửa hàng</a>
+        </div>
+        <div class="navbar-right1">
+            <a href="#">
+                Đăng nhập
+                Đăng ký
+            </a>
+        </div>
+        <div class="navbar-right1">
+            <a href="#">
+                Theo dõi
+                Đơn hàng
+            </a>
+        </div>
+
+    </div>
+        <div>
+            @RenderBody()
+        </div>
+        <footer>
+            <section class="footer-orange">
+                <section class="ft-1">
+                    <a>
+                        Cửa hàng - bách hóa
+                        hiện đại Co.opSmile
+                        là thành viên của nhà
+                        bán lẻ hàng đầu
+                        Việt Nam Saigon Co.op        <br>
+                    </a>
+                   
+              
+                    <a>
+                        <br>
+                        Đ/c văn phòng:
+                        131 Điện Biên Phủ, Phường 15,
+                        Quận Bình Thạnh, Tp. HCM
+                        info@coopsmile.vn
+                        0911.825753
+                    </a>
+                </section>
+                <section class="ft-1">
+                    <article>
+                        <h1>Hỗ trợ khách hàng</h1>
+                    </article>
+                        <a href="#">Điều khoản dịch vụ</a>
+                        <br />
+                        <a href="#">Chính sách bảo mật</a>
+                        <br />
+                        <a href="#">Chính sách đặt hàng</a>
+                        <br />
+                        <a href="#"> Chính sách giao nhận</a>
+                        <br />
+                        <a href="#">Chính sách đổi trả hàng</a>
+                        <br />
+                        <a href="#">Xuất hóa đơn GTGT</a>
+                   
+                </section>
+                <section class="ft-1">
+                    <article>
+                        <h1>Thông tin</h1>
+                    </article>
+                        <a href="#">Giới thiệu về Co.opSmile</a>
+                        <br />
+                        <a href="#">Câu chuyện thương hiệu</a>
+                        <br />
+                        <a href="#">Tuyển dụng</a>
+                        <br />
+                        <a href="#">Hệ thống cửa hàng</a>
+                        <br />
+                        <a href="#">Thông tin hỗ trợ khách hàng</a>
+                        <br />
+                   
+                </section>
+                <section class="ft-1">
+                    <article>
+                        <h1>Thông tin hữu ích</h1>
+                    </article>
+                        <a href="#">Quyền lợi thẻ thành viên</a>
+                        <br />
+                        <a href="#">Khuyến mãi nổi bật</a>
+                        <br />
+                        <a href="#">Thông tin - Sự kiện</a>
+               
+                </section>
+                <section class="ft-1">
+                    <article>
+                        <a>Chứng nhận</a>
+                    </article>
+                </section>
+            </section>
+            <section class="footer-footer">
+                <div class="icon-footer">
+
+                </div>
+                <a>Tên đơn vị: Công Ty TNHH MTV Bách Hóa Sài Gòn Co.op</a><br />
+                <a> Địa Chỉ: 199-205 Nguyễn Thái Học, Phường Phạm Ngũ Lão, Quận 1, Tp. Hồ Chí Minh.</a><br />
+                <a>Điện Thoại: 028.38.360.143 - Fax: 08 38 370 560</a><br />
+                <a>Giấy chứng nhận Đăng ký Kinh doanh số 0314057952 do Sở Kế Hoạch và Đầu Tư Tp.HCM cấp, Lần thứ 1 ngày: 11/10/2016</a><br />
+                <a>Cấp thay đổi lần thứ 2: 26/06/2019.</a><br />
+            </section>
+        </footer>
+</body>
+</html>
